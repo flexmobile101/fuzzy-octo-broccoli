@@ -1,1 +1,88 @@
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Phone, Mail, FileSignature, ShieldCheck, Building2 } from "lucide-react";
 
+export default function FlexMobileScanSign() {
+  return (
+    <div className="min-h-screen bg-neutral-50 text-neutral-900">
+      {/* HERO */}
+      <section className="px-6 py-20 text-center bg-white">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl md:text-5xl font-semibold mb-6"
+        >
+          Flex Mobile Scan & Sign LLC
+        </motion.h1>
+        <p className="max-w-2xl mx-auto text-lg text-neutral-600 mb-8">
+          Professional mobile notary, document scanning, and signing services across California. Reliable, compliant, and discreet service you can trust.
+        </p>
+        <Button className="rounded-2xl px-8 py-6 text-base">Request Service</Button>
+      </section>
+
+      {/* SERVICES */}
+      <section className="px-6 py-16 bg-neutral-100">
+        <h2 className="text-3xl font-medium text-center mb-12">Our Services</h2>
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <Card className="rounded-2xl shadow-sm">
+            <CardContent className="p-6">
+              <FileSignature aria-hidden="true" className="mb-4" />
+              <h3 className="text-xl font-medium mb-2">Mobile Notary</h3>
+              <p className="text-neutral-600">On-demand notarization for loan signings, affidavits, powers of attorney, and legal documents.</p>
+            </CardContent>
+          </Card>
+          <Card className="rounded-2xl shadow-sm">
+            <CardContent className="p-6">
+              <Building2 aria-hidden="true" className="mb-4" />
+              <h3 className="text-xl font-medium mb-2">Scan & Sign Solutions</h3>
+              <p className="text-neutral-600">Secure document scanning, signing coordination, and delivery for businesses and professionals.</p>
+            </CardContent>
+          </Card>
+          <Card className="rounded-2xl shadow-sm">
+            <CardContent className="p-6">
+              <ShieldCheck aria-hidden="true" className="mb-4" />
+              <h3 className="text-xl font-medium mb-2">Compliance & Accuracy</h3>
+              <p className="text-neutral-600">Strict adherence to California notary laws, privacy standards, and professional ethics.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="px-6 py-16 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-medium mb-6">About Flex Mobile Scan & Sign</h2>
+          <p className="text-neutral-600 leading-relaxed">
+            Flex Mobile Scan & Sign LLC is a California-based professional services company offering mobile notary and document solutions. We serve individuals, real estate professionals, lenders, legal teams, and businesses requiring dependable and timely execution of critical documents.
+          </p>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section className="px-6 py-16 bg-neutral-100">
+        <h2 className="text-3xl font-medium text-center mb-10">Contact</h2>
+        <address className="flex flex-col items-center gap-4 not-italic" aria-label="Business contact information">
+          <div className="flex items-center gap-2"><Phone /> <span>(XXX) XXX-XXXX</span></div>
+          <div className="flex items-center gap-2"><Mail /> <span>info@flexmobilescansign.com</span></div>
+        </address>
+      </section>
+
+      {/* LEGAL */}
+      <section className="px-6 py-16 bg-white">
+        <h2 className="text-3xl font-medium text-center mb-10">Legal</h2>
+        <div className="max-w-4xl mx-auto text-neutral-600 leading-relaxed">
+          <h3 className="text-xl font-medium mb-4">Privacy Policy</h3>
+          <p>Flex Mobile Scan & Sign LLC respects your privacy. We collect only necessary personal information for service delivery, document handling, and communications. We do not sell your data. All data is stored securely and shared only as required by law or to fulfill your requested services.</p>
+          <h3 className="text-xl font-medium mt-6 mb-4">Terms of Service</h3>
+          <p>By using Flex Mobile Scan & Sign LLC services, you agree to our terms. Services are provided in compliance with California laws. Clients are responsible for providing accurate information and documents. Flex Mobile Scan & Sign LLC is not liable for errors resulting from client-supplied information or documents. Payment is due upon service completion unless otherwise agreed.</p>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer role="contentinfo" className="px-6 py-8 bg-white text-center text-sm text-neutral-500">
+        © {new Date().getFullYear()} Flex Mobile Scan & Sign LLC · California · All Rights Reserved
+      </footer>
+    </div>
+  );
+}
