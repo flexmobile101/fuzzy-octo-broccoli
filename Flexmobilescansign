@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "../components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, FileSignature, ShieldCheck, Building2 } from "lucide-react";
 
@@ -64,7 +64,7 @@ export default function FlexMobileScanSign() {
       <section className="px-6 py-16 bg-neutral-100">
         <h2 className="text-3xl font-medium text-center mb-10">Contact</h2>
         <address className="flex flex-col items-center gap-4 not-italic" aria-label="Business contact information">
-          <div className="flex items-center gap-2"><Phone /> <span>(XXX) XXX-XXXX</span></div>
+          <div className="flex items-center gap-2"><Phone /> <span>(916)548-1021 </span></div>
           <div className="flex items-center gap-2"><Mail /> <span>info@flexmobilescansign.com</span></div>
         </address>
       </section>
